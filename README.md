@@ -1,15 +1,19 @@
-# symfony-cli
+# Symfony CLI  (symfony-cli)
 
 Alpine-based Docker image for Symfony CLI
 
-Like the official [symfonycorp/cli](https://hub.docker.com/r/symfonycorp/cli) but CI/CD itegratable.
+Like the official [symfonycorp/cli](https://hub.docker.com/r/symfonycorp/cli) but CI/CD integratable.
 
-`.gitlab-ci.yml`:
+## Basic usage example
+
+```shell
+docker run --rm -v "$(pwd):/app" mingalevme/symfony-cli check:security`
+```
+
+## GitLab CI/CD usage example (.gitlab-ci.yml)
 
 ```yml
-
 ...
-
 security:
   stage: quality
   image:
@@ -17,7 +21,5 @@ security:
     entrypoint: [""]
   script:
     - symfony check:security
-
 ...
-
 ```
