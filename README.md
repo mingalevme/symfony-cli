@@ -7,7 +7,7 @@ Like the official [symfonycorp/cli](https://hub.docker.com/r/symfonycorp/cli) bu
 ## Basic usage example
 
 ```shell
-docker run --rm -v "$(pwd):/app" mingalevme/symfony-cli check:security`
+docker run --rm -v "$(pwd):/app" mingalevme/symfony-cli check:security
 ```
 
 ## GitLab CI/CD usage example (.gitlab-ci.yml)
