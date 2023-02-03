@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - '*'
+  schedule:
+    - cron: '0 0 1 * *' # Every 1st dat of the month
 
 jobs:
   docker:
